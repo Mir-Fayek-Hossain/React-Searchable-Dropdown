@@ -122,10 +122,10 @@ function AddressForm({ addressData, setAddressData }) {
                 optionValues={mainData?.map((item) => {
                     return item["country"];
                 })}
-                selectedValue={(v) => {
+                selectedValue={(value) => {
                     setAddressData({
                         ...addressData,
-                        country: v,
+                        country: value,
                     });
                 }}
                 disable={false}
@@ -134,10 +134,10 @@ function AddressForm({ addressData, setAddressData }) {
                 label="Division"
                 value={addressData?.division}
                 optionValues={divisionOptions}
-                selectedValue={(v) => {
+                selectedValue={(value) => {
                     setAddressData({
                         ...addressData,
-                        division: v,
+                        division: value,
                     });
                 }}
                 disable={!addressData?.country?.length}
@@ -146,10 +146,10 @@ function AddressForm({ addressData, setAddressData }) {
                 label="District"
                 value={addressData?.district}
                 optionValues={districtOptions}
-                selectedValue={(v) => {
+                selectedValue={(value) => {
                     setAddressData({
                         ...addressData,
-                        district: v,
+                        district: value,
                     });
                 }}
                 disable={!addressData?.division?.length}
@@ -158,10 +158,10 @@ function AddressForm({ addressData, setAddressData }) {
                 label="Sub District"
                 value={addressData?.subDistrict}
                 optionValues={subDistrictOptions}
-                selectedValue={(v) => {
+                selectedValue={(value) => {
                     setAddressData({
                         ...addressData,
-                        subDistrict: v,
+                        subDistrict: value,
                     });
                 }}
                 disable={!addressData?.district?.length}
@@ -170,10 +170,10 @@ function AddressForm({ addressData, setAddressData }) {
                 label="Thana"
                 value={addressData?.thana}
                 optionValues={thanaOptions}
-                selectedValue={(v) => {
+                selectedValue={(value) => {
                     setAddressData({
                         ...addressData,
-                        thana: v,
+                        thana: value,
                     });
                 }}
                 disable={!addressData?.subDistrict?.length}
@@ -181,10 +181,10 @@ function AddressForm({ addressData, setAddressData }) {
             <SelectField
                 label="Zipcode"
                 value={addressData?.zipcode}
-                selectedValue={(v) => {
+                selectedValue={(value) => {
                     setAddressData({
                         ...addressData,
-                        zipcode: v,
+                        zipcode: value,
                     });
                 }}
                 disable={!addressData?.thana?.length}
@@ -192,10 +192,10 @@ function AddressForm({ addressData, setAddressData }) {
             <SelectField
                 label="Street Address"
                 value={addressData?.steetAddress}
-                selectedValue={(v) => {
+                selectedValue={(value) => {
                     setAddressData({
                         ...addressData,
-                        steetAddress: v,
+                        steetAddress: value,
                     });
                 }}
                 disable={!addressData?.zipcode?.length}
