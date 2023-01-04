@@ -27,7 +27,7 @@ function SelectField({ value, optionValues, label, selectedValue, disable }) {
             <input
             className="input-field c-pointer"
                 onClick={handleDropDownVisibility}
-                type="search"
+                type="text"
                 readOnly
                 value={value}
                 placeholder={"Select " + label}
@@ -53,7 +53,7 @@ function SelectField({ value, optionValues, label, selectedValue, disable }) {
                             {optionValues?.filter((optionValue) =>
                                     optionValue?.toLowerCase()?.includes(searchValue?.toLowerCase())
                                 )?.map((val) => {
-                                    if (value == val) {
+                                    if (value === val) {
                                         return (
                                             <li
                                                 key={val}

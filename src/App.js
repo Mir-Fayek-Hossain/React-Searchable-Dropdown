@@ -30,24 +30,27 @@ function App() {
         fax: "",
     });
     const copyAddressData = () => {
+        console.log(billingAddressData);
         setShippingAddressData({
             ...billingAddressData,
         });
     };
     return (
-        <div className="App">
             <div className="container">
-                <BillingAddress
+               <div className="col">
+               <BillingAddress
                     addressData={billingAddressData}
                     setAddressData={setBillingAddressData}
                 />
+               </div>
+                <div className="col">
                 <ShippingAddress
                     addressData={shippingAddressData}
                     setAddressData={setShippingAddressData}
                     copyAddressData={copyAddressData}
                 />
+                </div>
             </div>
-        </div>
     );
 }
 
