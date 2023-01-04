@@ -98,6 +98,9 @@ function AddressForm({ addressData, setAddressData }) {
             );
         }
     }, [addressData?.subDistrict]);
+    useEffect(()=>{
+        setAddressData(addressData);
+    },[addressData?.thana])
 
     return (
         <div className="App container-fluid">

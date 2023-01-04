@@ -30,7 +30,6 @@ function App() {
         fax: "",
     });
     const copyAddressData = () => {
-        console.log(billingAddressData);
         setShippingAddressData({
             ...billingAddressData,
         });
